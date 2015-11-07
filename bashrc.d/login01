@@ -7,7 +7,7 @@ if [[ x$CLUSTERNAME = xlogin || x$CLUSTERNAME = xfrigg || x$CLUSTERNAME = xskadi
     export CLUSTERNAME=$CLUSTERNAME
 
     # git
-    export PATH=$PATH:/home/dmanik/usr/bin
+    export PATH=$PATH:/usr/nld/git/bin
 fi
 
 if [[ x$CLUSTERNAME = xlogin ]]; then
