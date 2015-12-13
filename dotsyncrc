@@ -26,6 +26,7 @@ gtk-3.0/settings.ini:.config/gtk-3.0/settings.ini
 atom
 liquidprompt/liquidprompt:local/liquidprompt
 liquidprompt/liquidpromptrc:.config/liquidpromptrc
+pip:.config/pip
 latexmkrc/latexmkrc
 alias/alias
 ipython
