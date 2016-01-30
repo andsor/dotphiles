@@ -526,5 +526,3 @@ div.output_subarea {
     flex: 1;
     max-width: calc(100% - 14ex);
 }
-
-@import url('theme.css');

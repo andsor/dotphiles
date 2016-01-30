@@ -32,6 +32,7 @@ alias/alias
 ipython
 jupyter
 jupyter-nbextensions:.local/share/jupyter/nbextensions
+jupyter-themes
 #ack/ackrc
 #aptitude
 #ctags/ctags

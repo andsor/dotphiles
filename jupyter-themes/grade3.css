@@ -1,17 +1,11 @@
 /*
-    Name:       Oceans16 Dark
+    Name:       Happy16 Light
     Author:     Kyle Dunovan (http://github.com/dunovank)
-    Original Color Scheme by Gadzhi Kharkharov (https://github.com/kkga/spacegray)
-    CodeMirror & NB Style adapted from panditarevolution (https://github.com/panditarevolution/ipythonNotebook_customs)
-    CodeMirror template adapted for IPython Notebook by Nikhil Sonnad (https://github.com/nsonnad/base16-ipython-notebook)
-    Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)
 */
 
+body {background-color: #f9f9f9;}
 
-
-body {background-color: #262931;}
-
-a {color: #8997b0; font-family: 'Helvetica', sans-serif; }
+a {color: #303030; font-family: 'Helvetica', sans-serif; }
 div#notebook, div.CodeMirror, div.output_area pre, div.output_wrapper, div.prompt, div.CodeMirror pre {font-family:'Hack', monospace; font-size: 12pt;}
 
 /* Hiding the ipython log */
@@ -19,11 +13,11 @@ div#ipython_notebook {display: none;}
 
 
 /* INTRO PAGE */
-.toolbar_info {color: #8997b0; font-size: 12pt; border: 0; font-family: 'Helvetica', sans-serif; text-shadow: none !important; }
-.list_container {color: #8997b0; font-size: 12pt; border: 0; font-family: 'Helvetica', sans-serif;text-shadow: none !important; }
-.breadcrumb>li {text-shadow:0 0px 0; color:#8997b0; font-family: 'Helvetica', sans-serif; font-size: 12pt}
-.list_container a {color: #8997b0; font-family: 'Helvetica', sans-serif; font-size: 12pt; border: 0; text-shadow: none !important; }
-.item_icon {color: #2c85f7;}
+.toolbar_info {color: #4c4c4c; font-size: 12pt; border: 0; font-family: 'Helvetica', sans-serif; text-shadow: none !important; }
+.list_container {color: #4c4c4c; font-size: 12pt; border: 0; font-family: 'Helvetica', sans-serif;text-shadow: none !important; }
+.breadcrumb>li {text-shadow:0 0px 0; color:#4c4c4c; font-family: 'Helvetica', sans-serif; font-size: 12pt}
+.list_container a {color: #4c4c4c; font-family: 'Helvetica', sans-serif; font-size: 12pt; border: 0; text-shadow: none !important; }
+.item_icon {color: #ee8713;}
 
 /*<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>
 *****************************************
@@ -35,40 +29,26 @@ div#maintoolbar {
     display: none !important;
 }
 
-
-div.list_container a:hover {color: #eeeeee;}
-.list_header {
-    font-weight: normal;
-    background-color: #2A2F3C;
+div.list_container a:hover {color: #ee8713;}
+div#tree-selector.btn-group.dropdown {
+      background-color: rgba(184, 184, 184, 0.10);
+      background: rgba(184, 184, 184, 0.10);
+}
+.btn-group>.btn+.dropdown-toggle {
+    padding-left: 8px;
+    padding-right: 8px;
 }
 div.list_container :hover {
-    background-color: #2A2F3C;
-    color: #eeeeee;
+    background-color: rgba(184, 184, 184, 0.05);
+    color: #3a3a3a;
 }
 div.notebook_list_header {
-      background: #262931;
-
-}
-.list_container > div {
-    border-bottom: 1px solid rgba(53, 87, 120, 0.55);
-    font-size: 12pt;
-}
-.panel-default {
-    border-color: rgba(53, 87, 120, 0.55);
-}
-.panel {
-    line-height: 22px;
-    fontsize: 12px;
-    margin-bottom: 18px;
-    background-color: #262931;
-    color: #8997b0;
-    border: 2px solid rgba(53, 87, 120, 0.55);
-    box-shadow: none;
+    background: rgba(184, 184, 184, 0.05);
 }
 .dropdown-menu {
-    border: 1px solid rgba(53, 87, 120, 0.95);
-    background-color: #39414F;
-    background: #39414F;
+    background-color: #ececed;
+    background: #ececed;
+    border: thin solid #dbdbdb;
     box-shadow: none;
     padding-top: 0px;
     padding-bottom: 0px;
@@ -77,99 +57,101 @@ div.notebook_list_header {
     text-align: left;
 }
 .dropdown-menu:hover{
-    background-color: #39414F;
-    border: 1px solid rgba(53, 87, 120, 0.95);
+    background-color: #ececed;
+    border: thin solid #dbdbdb;
     box-shadow: none;
     padding-top: 0px;
     padding-bottom: 0px;
-}
-.modal-content {
-    position: relative;
-    background-color: #39414F;
-    border: 1px solid rgba(53, 87, 120, 0.15);
-    border-radius: 3px;
-    box-shadow: 0px 3px 9px rgba(53, 87, 120, 0.25);
-    background-clip: padding-box;
-    outline: 0px none;
 }
 .dropdown-header {
     display: block;
     padding: 3px 20px;
     font-size: 12pt;
     line-height: 1.42857;
-    color: #5c6b89;
+    color: #2c2c2c;
     text-decoration: underline;
-    text-decoration-color: rgba(53, 87, 120, 0.95);
     white-space: nowrap;
 }
 .dropdown-menu > li > a {
-    border: 1px solid #39414F;
     display: block;
     padding: none;
     clear: both;
+    background-color: #ececed;
+    background: #ececed;
     background-clip: padding-box;
     font-weight: normal;
     line-height: 1.42857;
-    color: #8997b0;
+    color: #2c2c2c;
     white-space: nowrap;
-    background-color: #39414F;
-    background: #39414F;
 }
 .dropdown-menu > li > a:hover {
     background-clip: padding-box;
-    background-color: #39414F;
-    border: 1px solid #39414F;
-    color: #eeeeee;
+    color: #000000;
     padding: none;
-    background: #39414F;
+    background: #dbdbdb;
 }
 .dropdown-menu .divider {
-    height: 2px;
+    height: 1px;
     margin: 8px 0px;
     overflow: hidden;
-    background-color: rgba(53, 87, 120, 0.95);
+    background-color: #dddddd;
 }
 .dropdown-menu > .disabled > a, .dropdown-menu > .disabled > a:hover, .dropdown-menu > .disabled > a:focus {
-    color: #5A647B;
+    color: #aaaaaa;
 }
 .modal-header {
     padding: 15px;
-    border-bottom: 1px solid rgba(53, 87, 120, 0.95);
+    border-bottom: 1px solid #f9f9f9;
     min-height: 16.4286px;
 }
+.modal-content {
+    position: relative;
+    background-color: #f9f9f9;
+    border: 1px solid #808080;
+    border-radius: 3px;
+    box-shadow: 0px 3px 9px #808080;
+    background-clip: padding-box;
+    outline: 0px none;
+}
+.panel {
+    line-height: 22px;
+    fontsize: 12px;
+    margin-bottom: 18px;
+    background-color: #f9f9f9;
+    color: #2c2c2c;
+    box-shadow: none;
+}
 #running .panel-group .panel .panel-heading {
-    background-color: #262931;
+    background-color: #f9f9f9;
     padding: 4px 7px;
     line-height: 22px;
 }
 #running .panel-group .panel .panel-heading a:hover {
-    color: #2c85f7;
+    color: #ee8713;
 }
 #running .panel-group .panel .panel-body .list_container .list_item {
-    border-bottom: 1px solid rgba(53, 87, 120, 0.55);
+    border-bottom: 1px solid rgba(224, 224, 224, 0.55);
 }
-
 #project_name > .breadcrumb {
     font-weight: normal;
-    color: #2c85f7;
+    color: #ee8713;
 
 }
 .rendered_html pre, .rendered_html code {
     font-size: 12pt;
-    color: #8997b0;
+    color: #2c2c2c;
     line-height: 100%;
-    background: #303845;
+    background: #dfdfdf;
 }
 body {
     font-family: "Helvetica", Helvetica, Arial, sans-serif;
     font-size: 12pt;
     line-height: 1.42857;
-    color: #8997b0;
+    color: #2c2c2c;
 }
-
 #kernel_indicator {
     float: right !important;
-    color: #2c85f7;
+    color: #ee8713;
 }
 #kernel_indicator .kernel_indicator_name {
     padding-left: 5px;
@@ -178,31 +160,30 @@ body {
 }
 #modal_indicator {
     float: right !important;
-    color: #2c85f7;
+    color: #ee8713;
 
 }
-
 .CodeMirror pre {
   font-family: 'Hack', monospace;
   font-size: 13pt;
 }
 
 .notebook_app {
-    background-color: #262931;
+    background-color: #f9f9f9;
 }
 .notebook_app #header {
     box-shadow: none !important;
-    background-color: #262931;
+    background-color: #f9f9f9;
 }
 #notebook-container {
     padding: 15px;
-    background-color: #262931;
+    background-color: #f9f9f9;
     min-height: 0px;
     box-shadow: none;
 }
 #header {
     box-shadow: none;
-    background-color: #262931;
+    background-color: #f9f9f9;
     position: relative;
     z-index: 100;
 }
@@ -212,21 +193,21 @@ body {
     box-shadow: none;
 }
 #header .header-bar {
-    background: #262931;
+    background: #f9f9f9;
 }
 /* text in output area (i.e. print some_list) */
 div.output_html {color: #1e2429;}
 
 /* Formatting code in text, code*/
 .rendered_html table, .rendered_html th, .rendered_html tr, .rendered_html td {
-  border: 1px #a4b8cb solid;
-  color: #a4b8cb;
-  background-color: #303845 !important;
+  border: 1px #4c4c4c; solid;
+  color: #4c4c4c;
+  background-color: #f9f9f9 !important;
   align-content: left !important;
 }
 .navbar-default {
-    background-color: #262931;
-    border-color: #262931;
+    background-color: #f9f9f9;
+    border-color: #f9f9f9;
 }
 #menubar .navbar {
     border-top: 1px;
@@ -235,20 +216,20 @@ div.output_html {color: #1e2429;}
     margin-top: 8px;
 }
 .navbar-default .navbar-nav > li > a {
-    color: #8997b0;
+    color: #4c4c4c;
     font-size: 14pt;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    color: #ffffff;
-    background-color: rgba(53, 108, 180, .5);
+    color: #000000;
+    background-color: rgba(184, 184, 184, 0.15);
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-    color: #ffffff;
-    background-color: rgba(53, 108, 180, .5);
+    color: #000000;
+    background-color: rgba(184, 184, 184, 0.15);
 }
 .btn {
-    color: #8997b0;
-    background: #262931;
+    color: #4c4c4c;
+    background: #f9f9f9;
     font-size: 12pt;
     font-weight: normal;
     border: 0 none !important;
@@ -258,8 +239,8 @@ div.output_html {color: #1e2429;}
 }
 
 .btn-group > .btn-mini {
-    color: #8997b0;
-    background: #262931;
+    color: #4c4c4c;
+    background: #f9f9f9;
     font-size: 11pt;
     font-weight: normal;
     border: 0 none !important;
@@ -267,15 +248,15 @@ div.output_html {color: #1e2429;}
     text-shadow: none;
 }
 .btn:hover {
-    color: #2c85f7;
-    background: #262931;
-    background-color: #262931;
+    color: #ee8713;
+    background: #f9f9f9;
+    background-color: #f9f9f9;
     background-image: none;
 }
 .btn-group > .btn-mini:hover {
-    color: #2c85f7;
-    background: #262931;
-    background-color: #262931;
+    color: #ee8713;
+    background: #f9f9f9;
+    background-color: #f9f9f9;
     background-image: none;
 }
 .btn-group, .btn-group-vertical {
@@ -284,35 +265,35 @@ div.output_html {color: #1e2429;}
     vertical-align: middle;
 }
 .ipython_tooltip {
-    border: 2px solid #3572C6;
+    border: 2px solid #4c4c4c;
     box-shadow: none;
     border-radius: 2px;
     position: absolute;
     z-index: 1000;
-    background-color: #39414F;
+    background-color: #dddddd;
 }
 
 .ipython_tooltip .tooltiptext pre {
     border: 0px none;
     border-radius: 0px;
-    background-color: #39414F;
-    color: #CFD2D9;
+    background-color: #dddddd;
+    color: #4c4c4c;
 }
 /* Formatting code in markdown cells */
 div.text_cell_render {
     font-family: 'Helvetica', sans-serif;
-    background: #303845;
+    background: #ececed;
     font-weight: 310;
-    color: #8997b0;
+    color: #4c4c4c;
 }
 /* Formatting code in markdown cells */
 div.text_cell_render pre {
-    color: #8997b0;
-    background-color: #303845;
+    color: #4c4c4c;
+    background-color: #ececed;
 }
 div.text_cell {
     max-width: 100%;
-    color: #8997b0;
+    color: #4c4c4c;
 }
 div.text_cell_render h1,
 div.text_cell_render h2,
@@ -321,20 +302,20 @@ div.text_cell_render h4,
 div.text_cell_render h5,
 div.text_cell_render h6 {
     font-family: 'Helvetica', sans-serif;
-    background: #303845;
+    background: #ececed;
     font-weight: 300;
-    color: #8997b0;
+    color: #4c4c4c;
     line-height: 80%;
 }
 
 /* text in output area (i.e. print some_list) */
-div.output_html {color: #a4b8cb;}
+div.output_html {color: #4c4c4c;}
 
 /* Formatting code in text, code*/
 .rendered_html table, .rendered_html th, .rendered_html tr, .rendered_html td {
-  border: 1px #a4b8cb solid;
-  color: #a4b8cb;
-  background-color: #39414F !important;
+  border: 1px #4c4c4c solid;
+  color: #4c4c4c;
+  background-color: #ececed !important;
   align-content: left !important;
 }
 
@@ -354,7 +335,7 @@ button.close {
     opacity: 0.3;
 }
 .close:hover {
-    color: #0095ff;
+    color: #3572C6;
     text-shadow: 0px 1px 0px rgba(53, 87, 120, 0.2);
     opacity: 0.9;
 }
@@ -365,78 +346,75 @@ button.close {
     padding: 6px 12px;
     font-size: 13pt;
     line-height: 1.6;
-    color: #6ea3d4;
-    background-color: #303845;
+    color: #4c4c4c;
+    background-color: #ececed;
     background-image: none;
     border: 1px solid rgba(53, 87, 120, 0.95);
     border-radius: 2px;
     box-shadow: none;
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
 }
-
 .modal-footer {
     padding: 15px;
     text-align: right;
-    border-top: 1px solid rgba(53, 87, 120, 0.95);
+    border-top: 1px solid rgba(184, 184, 184, 0.75);
 }
 .input-form-control:hover:active {
-      background-color:  rgba(53, 87, 120, 0.95);
-      selected:  rgba(53, 87, 120, 0.95);
+      background-color: rgba(184, 184, 184, 0.75);
+      selected: rgba(184, 184, 184, 0.75);
 }
 
 span.ansiblack {color: #2b303b;}
-span.ansiblue {color: #6ea3d4;}
-span.ansigray {color: #B4B7B4;}
-span.ansigreen {color: #8FC198;}
-span.ansipurple {color: #BE8fC1;}
-span.ansicyan {color: #7BC6C0;}
-span.ansiyellow {color: #DDD7A3;}
-span.ansired {color: #DB797C;}
+span.ansiblue {color: #154ba1;}
+span.ansigray {color: #b4b7b4;}
+span.ansigreen {color: #2d6836;}
+span.ansipurple {color: #483d8b;}
+span.ansicyan {color: #1592a2;}
+span.ansiyellow {color: #92a215;}
+span.ansired {color: #b82a18;}
 
 div.output_stderr {background-color: #DB797C;}
-div.output_stderr pre {color: #D0D4E6;}
+div.output_stderr pre {color: #000000;}
 
-.cm-s-ipython.CodeMirror {background: #303845; color: #D0D4E6; font-size:13pt !important;}
-.cm-s-ipython div.CodeMirror-selected {background: #3C4555 !important;}
-.cm-s-ipython .CodeMirror-gutters {background: #39414F; border: 0px; border-radius:0px;}
-.cm-s-ipython .CodeMirror-linenumber {color: #5A647B !important; font-size: 11pt;}
+.cm-s-ipython.CodeMirror {background: #ebebeb; color: #303030; font-size:13pt !important;}
+.cm-s-ipython div.CodeMirror-selected {background: #D3D4D7 !important;}
+.cm-s-ipython .CodeMirror-gutters {background: #cccccc; border: 0px; border-radius:0px;}
+.cm-s-ipython .CodeMirror-linenumber {color: #666666 !important; font-size: 11pt;}
 .cm-s-ipython .CodeMirror-cursor {border-left: 2px solid #0095ff !important;}
-.cm-s-ipython span.cm-comment {color: #6E7C95; font-style: normal !important;}
-.cm-s-ipython span.cm-atom {color: #CAA6EC;}
-.cm-s-ipython span.cm-number {color: #EFAA8E;}
-.cm-s-ipython span.cm-property {color: #77ABE7;}
-.cm-s-ipython span.cm-attribute {color: #E39194;}
-.cm-s-ipython span.cm-keyword {color: #CAA6EC; font-weight: normal;}
-.cm-s-ipython span.cm-string {color: #8FCA9A; font-weight: normal;}
-.cm-s-ipython span.cm-operator {color: #77ABE7; font-weight: normal;}
-.cm-s-ipython span.cm-builtin {color: #E39194; font-weight: normal;}
-.cm-s-ipython span.cm-boolean {color: #E39194;}
-.cm-s-ipython span.cm-variable {color: #D0D4E6;}
-.cm-s-ipython span.cm-variable-2 {color: #E39194;}
+.cm-s-ipython span.cm-comment {color: #707070; font-style: italic !important;}
+.cm-s-ipython span.cm-atom {color: #653bc5;}
+.cm-s-ipython span.cm-number {color: #eb6a1a;}
+.cm-s-ipython span.cm-property {color: #de143d;}
+.cm-s-ipython span.cm-attribute {color: #de143d;}
+.cm-s-ipython span.cm-keyword {color: #653bc5; font-weight: normal;}
+.cm-s-ipython span.cm-string {color: #007f00; font-weight: normal;}
+.cm-s-ipython span.cm-operator {color: #055be0; font-weight: normal;}
+.cm-s-ipython span.cm-builtin {color: #de143d; font-weight: normal;}
+.cm-s-ipython span.cm-variable {color: #000000;}
+.cm-s-ipython span.cm-variable-2 {color: #de143d;}
 
-.cm-s-ipython span.cm-def {color: #77ABE7; font-weight: normal;}
+.cm-s-ipython span.cm-def {color: #055be0; font-weight: normal;}
 .cm-s-ipython span.cm-error {background: rgba(191, 97, 106, .3) !important;}
-.cm-s-ipython span.cm-tag {color: #CAA6EC;}
-.cm-s-ipython span.cm-link {color: #E39194;}
-.cm-s-ipython span.cm-storage {color: #CAA6EC;}
-.cm-s-ipython span.cm-entity {color: #E39194;}
-.cm-s-ipython span.cm-class {color: #E5DEA5;}
-.cm-s-ipython span.cm-support {color: #77ABE7;}
-.cm-s-ipython span.cm-qualifier {color: #77ABE7;}
-.cm-s-ipython span.cm-property {color: #77ABE7;}
+.cm-s-ipython span.cm-tag {color: #653bc5;}
+.cm-s-ipython span.cm-link {color: #eb6a1a;}
+.cm-s-ipython span.cm-storage {color: #055be0;}
+.cm-s-ipython span.cm-entity {color: #de143d;}
+.cm-s-ipython span.cm-class {color: #e22978;}
+.cm-s-ipython span.cm-support {color: #de143d;}
+.cm-s-ipython span.cm-qualifier {color: #de143d;}
 
 
 
-div.CodeMirror span.CodeMirror-matchingbracket { color: #eeeeee; background: rgba(53, 108, 180, .75) !important ; }
-div.CodeMirror span.CodeMirror-nonmatchingbracket { color: #eeeeee; background: rgba(191, 97, 106, .3) !important ; }
-.cm-s-ipython .CodeMirror-matchingbracket { color: #eeeeee; background: rgba(53, 108, 180, .75)  !important; }
-.cm-s-ipython .CodeMirror-nonmatchingbracket { color: #eeeeee; background: rgba(191, 97, 106, .3) !important; }
+div.CodeMirror span.CodeMirror-matchingbracket { color: #000000; background: rgba(53, 114, 198, .3); !important ; }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: #000000; background: rgba(191, 97, 106, .3) !important ; }
+.cm-s-ipython .CodeMirror-matchingbracket { color: #000000; background: rgba(53, 114, 198, .3)  !important; }
+.cm-s-ipython .CodeMirror-nonmatchingbracket { color: #000000; background: rgba(191, 97, 106, .3) !important; }
 
 
-div.cell { border: medium solid #262931; padding: 0px; border-radius: 0px; }
-div.cell.selected { border: medium solid #3572C6; padding: 0px; border-radius: 0px; }
-.edit_mode div.cell.selected {border: medium solid #39485b !important; padding: 0px; border-radius: 0px; }
-div.cell.edit_mode {border: medium solid #39485b !important; padding: 0px; border-radius: 0px;}
+div.cell { border: medium solid #f9f9f9; padding: 0px; border-radius: 0px; }
+div.cell.selected { border: medium solid #ffa43b; padding: 0px; border-radius: 0px; }
+.edit_mode div.cell.selected {border: medium solid #ffd5bb !important; padding: 0px; border-radius: 0px; }
+div.cell.edit_mode {border: medium solid #ffd5bb !important; padding: 0px; border-radius: 0px;}
 
 div.prompt {
     padding: 0.3em;
@@ -447,6 +425,7 @@ div.prompt {
     min-width: 11ex;
     font-size: 9.5pt;
 }
+
 div.input_area {
     margin-bottom: 0px;
     border: 0px;
@@ -455,20 +434,21 @@ div.input_area {
 /*Input and output cells formatting*/
 div.prompt.input_prompt {
     font-family: 'Hack', monospace;
-    border-right: 2px solid rgba(53, 108, 180, .4);
+    border-right: 1px solid rgba(240, 147, 43, .5);
     font-weight: bold;
     font-size: 9.5pt;
-    color: #5A647B;
-    background-color: #303845;
+    color: #aaaaaa;
+    background-color: #ececed;
     width: 1em;
     padding-bottom: 0px;
     margin-bottom: 0px;
 }
+
 div.prompt.output_prompt {
     font-family: 'Hack', monospace;
     font-weight: bold;
-    background-color: #39414F;
-    color: #39414F;
+    background-color: #ffffff;
+    color: #ffffff;
     font-size: 9.5pt;
     width: 1em;
     margin-bottom: 8px;
@@ -481,7 +461,7 @@ div.out_prompt_overlay.prompt {
     font-size: 9.5pt;
     width: 1em;
     margin-bottom: 8px;
-    background-color: #39414F;
+    background-color: #ffffff;
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -493,13 +473,14 @@ div.out_prompt_overlay.prompt:hover {
     width: 1em;
     border-radius: 4px;
     margin-bottom: 8px;
-    background-color: #39414F;
-    box-shadow: #303845 2px 2px 6px 4px inset;
+    background-color: #ffffff;
+    box-shadow: #ececed 2px 2px 6px 4px inset;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
 }
+
 div.output_wrapper {
-    background-color:#39414F;
+    background-color:#ffffff;
     margin-bottom: 0em;
     margin-top: 0em;
     border: 0px;
@@ -510,11 +491,12 @@ div.output_subarea.output_text.output_stream.output_stdout,div.output_subarea.ou
     margin-top: 8px;
     margin-left: 8px;
     margin-right: 8px;
-    background-color: #39414F;
-    color: #CFD2D9;
+    background-color: #ffffff;
+    color: #000000;
 }
+
 div.output_area pre {
-    color: #CFD2D9;
+    color: #000000;
     font-size: 12pt;
 }
 div.output_subarea {
@@ -526,5 +508,3 @@ div.output_subarea {
     flex: 1;
     max-width: calc(100% - 14ex);
 }
-
-@import url('theme.css');
