@@ -1,5 +1,5 @@
 #!/bin/bash
-QUEUES=frigg.q,skadi.q,navier.q,fulla.q
+QUEUES=${1:-frigg.q,skadi.q,navier.q,fulla.q}
 
 qstat -g c -q $QUEUES
 echo
