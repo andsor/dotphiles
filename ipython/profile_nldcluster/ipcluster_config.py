@@ -474,7 +474,7 @@ c.IPClusterStart.controller_launcher_class = 'SGE'
 import sys
 c.SGEControllerLauncher.batch_template = """#$ -S /bin/bash
 #$ -N ipc{cluster_id}
-#$ -q {queue}
+#$ -q fulla.q
 source """ + sys.prefix + """/bin/activate
 """ + sys.executable + """ -m ipyparallel.controller --profile-dir="{profile_dir}" --cluster-id="{cluster_id}"
 """
@@ -492,7 +492,7 @@ import sys
 c.SGEEngineSetLauncher.batch_template = """#$ -S /bin/bash
 #$ -N ipe{cluster_id}
 #$ -t 1-{n}
-#$ -q {queue}
+#$ -q fulla.q
 source """ + sys.prefix + """/bin/activate
 """ + sys.executable + """ -m ipyparallel.engine --profile-dir="{profile_dir}" --cluster-id="{cluster_id}"
 """
