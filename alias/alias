@@ -12,4 +12,5 @@ alias gx='gitx --all '
 alias gl='git log --oneline --decorate '
 alias skadi='ssh -t fassberg-login ssh -t skadi01 screen -RR'
 alias fassberg-desktop='ssh -t fassberg-login ssh -t cay screen -RR'
+alias pwg='pwgen -B -c -n -y 16 1'
 
