@@ -1,7 +1,7 @@
 {
   "load_extensions": {
     "nbextensions_configurator/config_menu/main": true,
-    "notebook-extensions-master/calysto/cell-tools/main": true,
-    "notebook-extensions-master/calysto/document-tools/main": true
+    "notebook-extensions/calysto/cell-tools/main": true,
+    "notebook-extensions/calysto/document-tools/main": true
   }
 }
