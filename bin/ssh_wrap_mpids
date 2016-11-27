@@ -35,7 +35,7 @@ if [ "$1" = "loginbs" ]
 		fi
 fi
  
-if echo $1 | grep -E "wotan|frigg|skadi|fulla|nanna"
+if echo $1 | grep -E "wotan|frigg|skadi|fulla|nanna|freya|hel|iduna|navier|sunna|thor|ull"
 	then ssh loginfb -W $1:22
 fi
  
