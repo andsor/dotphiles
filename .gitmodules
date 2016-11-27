@@ -16,3 +16,6 @@
 [submodule "liquidprompt/liquidprompt"]
 	path = liquidprompt/liquidprompt
 	url = git://github.com/nojhan/liquidprompt.git
+[submodule "jupyter-nbextensions/notebook-extensions"]
+	path = jupyter-nbextensions/notebook-extensions
+	url = git://github.com/Calysto/notebook-extensions

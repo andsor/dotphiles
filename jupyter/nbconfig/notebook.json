@@ -1,6 +1,6 @@
 {
   "load_extensions": {
-    "calico-document-tools": false,
-    "calico-cell-tools": false
+    "notebook-extensions-master/calysto/document-tools/main": true,
+    "notebook-extensions-master/calysto/cell-tools/main": true
   }
 }
