@@ -25,9 +25,17 @@
     "collapsible_headings/main": true,
     "rise/main": true,
     "contrib_nbextensions_help_item/main": true,
-    "notebook-extensions/calysto/document-tools/main": true
+    "notebook-extensions/calysto/document-tools/main": true,
+    "latex_envs/latex_envs": true,
+    "scroll_down/main": true,
+    "skip-traceback/main": true,
+    "code_font_size/code_font_size": true,
+    "help_panel/help_panel": true,
+    "keyboard_shortcut_editor/main": true,
+    "notify/notify": true
   },
   "collapsible_headings": {
     "show_section_brackets": false
-  }
+  },
+  "scrollDownIsEnabled": true
 }
