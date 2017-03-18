@@ -10,4 +10,5 @@ setxkbmap -option grp:switch,grp:alt_space_toggle,lv3:ralt_switch,eurosign:e de,
 [ -f /home/sorge/.travis/travis.sh ] && source /home/sorge/.travis/travis.sh
 
 # added by Miniconda3 4.2.12 installer
-export PATH="/home/sorge/opt/miniconda3/bin:$PATH"
+PATH="/home/sorge/opt/miniconda3/bin:/usr/local/texlive/2016/bin/x86_64-linux:$PATH"
+export PATH=$PATH
