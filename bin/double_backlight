@@ -1,0 +1,3 @@
+#!/bin/bash
+
+xbacklight -set `bc <<< "scale=2;$(xbacklight)*2+1"`

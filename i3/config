@@ -203,7 +203,7 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id pasystray
 
 # clipboard manager
-exec --no-startup-id glipper
+# exec --no-startup-id glipper
 
 # flux
 exec --no-startup-id xflux -l 52 -g 10
@@ -229,3 +229,7 @@ bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 bindsym $mod+Next workspace next_on_output
 bindsym $mod+Prior workspace prev_on_output
+
+bindcode 233 exec --no-startup-id double_backlight
+bindcode 232 exec --no-startup-id half_backlight 
+
