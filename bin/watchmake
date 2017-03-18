@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# http://stackoverflow.com/a/23734495
+
+while true; do
+    make $@
+    inotifywait -qre close_write .
+done
