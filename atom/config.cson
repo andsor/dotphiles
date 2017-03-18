@@ -1,35 +1,19 @@
 "*":
-  "exception-reporting":
-    userId: "e4298220-e885-6af2-5ff4-1044af9eae5d"
-  welcome:
-    showOnStartup: false
+  Zen:
+    softWrap: true
+  "atom-beautify":
+    _analyticsUserId: "a346902f-9ff9-4be4-8ffa-cf0bf68cafeb"
   core:
-    projectHome: "/home/sorge/repos"
-    themes: [
-      "one-dark-ui"
-      "base16-tomorrow-dark-theme"
-    ]
     audioBeep: false
+    autoHideMenuBar: true
     disabledPackages: [
       "latex-completions"
       "exception-reporting"
-      "atom-beautify"
       "atom-python-debugger"
-      "autocomplete-python"
-      "highlight-line"
-      "language-latex"
-      "latex"
-      "linter-chktex"
-      "linter-pep257"
-      "markdown-preview-plus"
-      "linter-python-pyflakes"
-      "linter-python-pep8"
       "python-isort"
-      "texlicious"
       "autocomplete-bibtex"
       "ex-mode"
       "latexer"
-      "minimap"
       "archive-view"
       "autocomplete-atom-api"
       "autocomplete-css"
@@ -52,25 +36,50 @@
       "spell-check"
       "welcome"
       "styleguide"
+      "language-gfm"
+      "markdown-preview"
+      "markdown-scroll-sync"
+      "vim-mode"
+      "vim-surround"
+      "latex-plus"
     ]
-    autoHideMenuBar: true
+    projectHome: "/home/sorge/repos"
+    themes: [
+      "one-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
   editor:
-    invisibles: {}
     fontFamily: "Source Code Pro"
-    tabLength: 4
-    showLineNumbers: false
+    invisibles: {}
     scrollPastEnd: true
-    softWrap: true
-  minimap:
-    absoluteMode: true
-  Zen:
-    softWrap: true
+    tabLength: 4
+  "exception-reporting":
+    userId: "e4298220-e885-6af2-5ff4-1044af9eae5d"
   "highlight-line":
     enableBackgroundColor: false
-  "atom-beautify":
-    _analyticsUserId: "a346902f-9ff9-4be4-8ffa-cf0bf68cafeb"
   "linter-pep257": {}
-  texlicious: {}
   "linter-pylint": {}
+  "markdown-preview": {}
+  "markdown-writer":
+    fileExtension: ".md"
+  minimap:
+    absoluteMode: true
+    displayMinimapOnLeft: true
+    plugins:
+      bookmarks: true
+      bookmarksDecorationsZIndex: 0
   "spell-check": {}
   "status-bar": {}
+  texlicious: {}
+  "tree-view":
+    showOnRightSide: true
+  welcome:
+    showOnStartup: false
+  "zotero-citations": {}
+".md.text":
+  editor:
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: false
+    softWrapAtPreferredLineLength: false
+    tabLength: 2
