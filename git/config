@@ -10,8 +10,8 @@
 # Global Config
 [user]
     name = "Andreas Sorge"
-    email = "as@asorge.de"
-    #signingkey = **Your GPG ID**
+    email = "as@pycnic.org"
+    signingkey = 0xCE36C4BDE62EE5A1
 
 [github]
     user = andsor
