@@ -3,6 +3,8 @@
     softWrap: true
   "atom-beautify":
     _analyticsUserId: "a346902f-9ff9-4be4-8ffa-cf0bf68cafeb"
+  "autocomplete-python":
+    useKite: false
   core:
     audioBeep: false
     autoHideMenuBar: true
@@ -42,6 +44,8 @@
       "vim-mode"
       "vim-surround"
       "latex-plus"
+      "linter-python-pyflakes"
+      "linter-python-pep8"
     ]
     projectHome: "/home/sorge/repos"
     themes: [
@@ -59,6 +63,8 @@
     enableBackgroundColor: false
   "linter-pep257": {}
   "linter-pylint": {}
+  "linter-ui-default":
+    showPanel: true
   "markdown-preview": {}
   "markdown-writer":
     fileExtension: ".md"
