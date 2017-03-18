@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Counting recursively the number of files in all subdirectories, aggregating up to two levels
+# beneath the working directory
+IFS=; find . -maxdepth 2 -type d -print0 | while IFS= read -r -d '' dir; do echo -n "$(find $dir -type f | wc -l)" ; echo -e "\t"$dir ; done
