@@ -1,5 +1,8 @@
 umask 0077
 
+# conda
+export PATH=/home/sorge/opt/miniconda3/bin:$PATH
+
 # Clustername
 CLUSTERNAME=`hostname | grep -o "[[:alpha:]]*"`
 
@@ -26,3 +29,4 @@ if [[ x$CLUSTERNAME == xdesktop || $SGE_CLUSTER_NAME ]]; then
 
     export PATH=$ENVDIR/bin:${PATH}
 fi
+
