@@ -35,7 +35,9 @@
     "notify/notify": true
   },
   "collapsible_headings": {
-    "show_section_brackets": false
+    "show_section_brackets": false,
+    "make_toggle_controls_buttons": true,
+    "add_button": true
   },
   "scrollDownIsEnabled": true
 }
