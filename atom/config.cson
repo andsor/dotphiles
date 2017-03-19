@@ -61,7 +61,11 @@
     userId: "e4298220-e885-6af2-5ff4-1044af9eae5d"
   "highlight-line":
     enableBackgroundColor: false
+  linter:
+    lintOnChange: false
   "linter-pep257": {}
+  "linter-pydocstyle":
+    ignoreFiles: "test_"
   "linter-pylint": {}
   "linter-ui-default":
     showPanel: true
