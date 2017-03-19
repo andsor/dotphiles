@@ -3,6 +3,11 @@ umask 0077
 # conda
 export PATH=/home/sorge/opt/miniconda3/bin:$PATH
 
+# Source queueing system settings
+source /core/ge/NLD/common/settings.sh
+DRMAA_LIBRARY_PATH=/core/ge/lib/linux-x64/libdrmaa.so
+export DRMAA_LIBRARY_PATH=$DRMAA_LIBRARY_PATH
+
 # Clustername
 CLUSTERNAME=`hostname | grep -o "[[:alpha:]]*"`
 
