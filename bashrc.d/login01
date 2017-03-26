@@ -1,8 +1,5 @@
 umask 0077
 
-# conda
-export PATH=/home/sorge/opt/miniconda3/bin:$PATH
-
 # Source queueing system settings
 source /core/ge/NLD/common/settings.sh
 DRMAA_LIBRARY_PATH=/core/ge/lib/linux-x64/libdrmaa.so
@@ -34,4 +31,7 @@ if [[ x$CLUSTERNAME == xdesktop || $SGE_CLUSTER_NAME ]]; then
 
     export PATH=$ENVDIR/bin:${PATH}
 fi
+
+# conda
+export PATH=/home/sorge/opt/miniconda3/bin:$PATH
 
