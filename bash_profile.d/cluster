@@ -1,0 +1,10 @@
+# bash configuration for interactive shell
+# Aliases
+test -s ~/.alias && . ~/.alias || true
+
+# LiquidPrompt
+source ~/local/liquidprompt/liquidprompt
+
+if [ -n "$BASH" ] && [ -r ~/.bashrc ]; then
+    . ~/.bashrc
+fi
