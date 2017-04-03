@@ -3,4 +3,4 @@
 JUPYTER=/scratch/asorge/miniconda/envs/$1/bin/jupyter-notebook
 JUPYTER_RUNTIME_DIR=/scratch/asorge/tmp/jupyter
 
-mkdir -p $JUPYTER_RUNTIME_DIR && [[ -x $JUPYTER ]] && gwdg-int -c "JUPYTER_RUNTIME_DIR=$JUPYTER_RUNTIME_DIR $JUPYTER --no-browser"
+mkdir -p $JUPYTER_RUNTIME_DIR && [[ -x $JUPYTER ]] && gwdg-int -c "JUPYTER_RUNTIME_DIR=$JUPYTER_RUNTIME_DIR $JUPYTER --no-browser" || (echo "File does not exist or is not executable: $JUPYTER" >&2; exit 1)
