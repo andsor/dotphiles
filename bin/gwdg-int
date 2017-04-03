@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# -l for login shell (sources .bash_profile)
+bsub -ISs -q int -W 12:00 /bin/bash -l
