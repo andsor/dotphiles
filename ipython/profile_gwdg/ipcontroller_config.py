@@ -114,7 +114,7 @@
 ## ssh url for clients to use when connecting to the Controller processes. It
 #  should be of the form: [user@]server[:port]. The Controller's listening
 #  addresses must be accessible from the ssh server
-c.IPControllerApp.ssh_server = 'gwdg-hpc'
+#c.IPControllerApp.ssh_server = 'gwdg-hpc'
 
 ## Use threads instead of processes for the schedulers
 #c.IPControllerApp.use_threads = False

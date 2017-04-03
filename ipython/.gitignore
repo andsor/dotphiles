@@ -3,3 +3,4 @@ profile_default/startup/README
 profile_*/log
 profile_*/pid
 profile_*/security
+profile_*/db
