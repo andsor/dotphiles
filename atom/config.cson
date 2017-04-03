@@ -68,6 +68,7 @@
     ignoreFiles: "test_"
   "linter-pylint": {}
   "linter-ui-default":
+    panelHeight: 59
     showPanel: true
   "markdown-preview": {}
   "markdown-writer":
