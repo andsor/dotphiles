@@ -506,6 +506,19 @@ c.LSFLauncher.queue = 'mpi-short'
 ## batch file name for the controller job.
 #c.LSFControllerLauncher.batch_file_name = 'lsf_controller'
 
+import sys
+ipcontroller_cmd_argv = [sys.executable, "-m", "ipyparallel.controller"]
+
+import pipes
+c.LSFControllerLauncher.batch_template = """#!/bin/sh
+#BSUB -q {queue}
+#BSUB -J ipcontroller
+#BSUB -o /scratch/asorge/tmp/ipcluster/ipcontroller.o.%%J
+#BSUB -e /scratch/asorge/tmp/ipcluster/ipcontroller.e.%%J
+#BSUB -R scratch
+%s --profile-dir="{profile_dir}" --cluster-id="{cluster_id}"
+""" % (' '.join(map(pipes.quote, ipcontroller_cmd_argv)))
+
 #------------------------------------------------------------------------------
 # LSFEngineSetLauncher(LSFLauncher,BatchClusterAppMixin) configuration
 #------------------------------------------------------------------------------
@@ -514,6 +527,19 @@ c.LSFLauncher.queue = 'mpi-short'
 
 ## batch file name for the engine(s) job.
 #c.LSFEngineSetLauncher.batch_file_name = 'lsf_engines'
+
+import sys
+ipengine_cmd_argv = [sys.executable, "-m", "ipyparallel.engine"]
+
+import pipes
+c.LSFEngineSetLauncher.batch_template = """#!/bin/sh
+#BSUB -J ipengine[1-{n}]
+#BSUB -q {queue}
+#BSUB -o /scratch/asorge/tmp/ipcluster/ipengine.o.%%J
+#BSUB -e /scratch/asorge/tmp/ipcluster/ipengine.e.%%J
+#BSUB -R scratch
+%s --profile-dir="{profile_dir}" --cluster-id="{cluster_id}"
+""" % (' '.join(map(pipes.quote, ipengine_cmd_argv)))
 
 #------------------------------------------------------------------------------
 # HTCondorLauncher(BatchSystemLauncher) configuration
