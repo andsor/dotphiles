@@ -495,7 +495,11 @@ c.IPClusterStart.controller_launcher_class = 'LSF'
 ## The PBS submit command ['bsub']
 #c.LSFLauncher.submit_command = ['bsub']
 
-c.LSFLauncher.queue = 'mpi-short'
+import os
+dir_path = os.path.dirname(__file__)
+profile = os.path.split(dir_path)[1]
+
+c.LSFLauncher.queue = 'mpi-short' if 'short' in profile else 'mpi'
 
 #------------------------------------------------------------------------------
 # LSFControllerLauncher(LSFLauncher,BatchClusterAppMixin) configuration
@@ -514,7 +518,12 @@ c.LSFControllerLauncher.batch_template = """#!/bin/sh
 #BSUB -q {queue}
 #BSUB -J ipcontroller
 #BSUB -R scratch
-%s --profile-dir="{profile_dir}" --cluster-id="{cluster_id}"
+"""
+
+if not 'short' in profile:
+    c.LSFControllerLauncher.batch_template += "#BSUB -W 48:00\n"
+
+c.LSFControllerLauncher.batch_template += """%s --profile-dir="{profile_dir}" --cluster-id="{cluster_id}"
 """ % (' '.join(map(pipes.quote, ipcontroller_cmd_argv)))
 
 #------------------------------------------------------------------------------
@@ -534,7 +543,14 @@ c.LSFEngineSetLauncher.batch_template = """#!/bin/sh
 #BSUB -J ipengine[1-{n}]
 #BSUB -q {queue}
 #BSUB -R scratch
-%s --profile-dir="{profile_dir}" --cluster-id="{cluster_id}"
+#BSUB -eo /scratch/asorge/tmp/ipcluster/ipengine.e.%%J
+#BSUB -oo /scratch/asorge/tmp/ipcluster/ipengine.o.%%J
+"""
+
+if not 'short' in profile:
+    c.LSFEngineSetLauncher.batch_template += "#BSUB -W 48:00\n"
+
+c.LSFEngineSetLauncher.batch_template += """%s --profile-dir="{profile_dir}" --cluster-id="{cluster_id}"
 """ % (' '.join(map(pipes.quote, ipengine_cmd_argv)))
 
 #------------------------------------------------------------------------------
