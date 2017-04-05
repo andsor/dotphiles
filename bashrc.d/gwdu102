@@ -1,6 +1,4 @@
 umask 0077
 
-
-
 # added by Miniconda3 4.3.11 installer
-export PATH="/scratch/asorge/miniconda/bin:$PATH"
+export PATH="/usr/users/asorge/miniconda/bin:$PATH"
