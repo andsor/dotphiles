@@ -178,7 +178,7 @@ c.IPClusterEngines.n = 16
 c.IPClusterStart.controller_launcher_class = 'LSF'
 
 ## delay (in s) between starting the controller and the engines
-#c.IPClusterStart.delay = 1.0
+c.IPClusterStart.delay = 5.0
 
 ## Whether to reset config files as part of '--create'.
 #c.IPClusterStart.reset = False
@@ -543,8 +543,8 @@ c.LSFEngineSetLauncher.batch_template = """#!/bin/sh
 #BSUB -J ipengine[1-{n}]
 #BSUB -q {queue}
 #BSUB -R scratch
-#BSUB -eo /scratch/asorge/tmp/ipcluster/ipengine.e.%%J
-#BSUB -oo /scratch/asorge/tmp/ipcluster/ipengine.o.%%J
+#BSUB -eo /scratch/asorge/tmp/ipcluster/ipengine.e.%J
+#BSUB -oo /scratch/asorge/tmp/ipcluster/ipengine.o.%J
 """
 
 if not 'short' in profile:
