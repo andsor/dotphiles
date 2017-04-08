@@ -104,6 +104,21 @@
 #  engine and client connections.
 #c.IPControllerApp.location = ''
 
+try:
+    import netifaces
+
+except ImportError:
+    pass
+
+else:
+    eth_ifaddresses = [netifaces.ifaddresses(interface) for interface in netifaces.interfaces() if 'eth' in interface]
+    eth_ip4addresses = [interface[netifaces.AF_INET] for interface in eth_ifaddresses if netifaces.AF_INET in interface]
+    try:
+        c.IPControllerApp.location = eth_ip4addresses[0][0]['addr']
+    except IndexError:
+        pass
+
+
 ## Reload engine state from JSON file
 #c.IPControllerApp.restore_engines = False
 
@@ -237,6 +252,7 @@
 ## The IP address for registration.  This is generally either '127.0.0.1' for
 #  loopback only or '*' for all interfaces.
 c.RegistrationFactory.ip = '*'
+
 
 ## The port on which the Hub listens for registration.
 #c.RegistrationFactory.regport = 0
