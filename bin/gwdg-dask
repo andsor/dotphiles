@@ -1,0 +1,77 @@
+#!/usr/bin/env python
+
+import click
+
+import getpass
+import subprocess
+import os
+import pathlib
+import sys
+import time
+
+
+SCRATCH_DASK = pathlib.Path('/scratch') / getpass.getuser() / 'tmp' / 'dask'
+SCHEDULER_FILE = 'scheduler.json'
+
+
+@click.command()
+@click.option('--short', is_flag=True)
+@click.option('--nworkers', '-n', default=16, type=int)
+@click.option('--noscheduler', is_flag=True)
+def dask(short, nworkers, noscheduler):
+
+    if not SCRATCH_DASK.is_dir():
+        os.makedirs(SCRATCH_DASK)
+
+    scheduler_script = subprocess.check_output(['which', 'dask-scheduler']).strip().decode()
+    worker_script = subprocess.check_output(['which', 'dask-worker']).strip().decode()
+   
+    scheduler_file = SCRATCH_DASK / SCHEDULER_FILE
+
+    queue = 'mpi-short' if short else 'mpi'
+
+    if not noscheduler:
+        scheduler_bsub_args = [
+            'bsub',
+            '-q', queue,
+            '-R', 'scratch',
+            '-J', 'scheduler']
+        if not short:
+            scheduler_bsub_args += [
+                '-W', '48:00']
+        scheduler_bsub_args += [
+            scheduler_script,
+            '--scheduler-file', str(scheduler_file)]
+    
+        click.echo(' '.join(scheduler_bsub_args))
+        scheduler_output = subprocess.check_output(scheduler_bsub_args)
+        click.echo(scheduler_output.strip())
+          
+    if nworkers: 
+        time.sleep(5)
+        worker_bsub_args = [
+            'bsub',
+            '-q', queue,
+            '-R', 'scratch',
+            '-oo', str(SCRATCH_DASK / 'worker.o.%J'),
+            '-eo', str(SCRATCH_DASK / 'worker.e.%J'),
+            '-J', 'worker[1-{}]'.format(nworkers)]
+        if not short:
+            worker_bsub_args += [
+                '-W', '48:00']
+        worker_bsub_args += [
+            worker_script,
+            '--no-nanny',
+            '--memory-limit', '3221225472',  # 3 GB
+            '--reconnect',
+            '--local-directory', str(SCRATCH_DASK),
+            '--death-timeout', '60',
+            '--scheduler-file', str(scheduler_file)]
+    
+        click.echo(' '.join(worker_bsub_args))
+        worker_output = subprocess.check_output(worker_bsub_args)
+        click.echo(worker_output.strip())
+           
+
+if __name__ == '__main__':
+    dask()
