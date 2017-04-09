@@ -4,7 +4,7 @@
 
 ### GWDG HPC clusters
 
-- Two logical profiles: ``gwdg`` and ``gwdg_short`` (symlinked)
+- Two logical profiles: ``gwdg`` and ``gwdg-short`` (symlinked)
 - Currently, configuration decides depending on the profile name which queue to
   submit to (``mpi`` or ``mpi-short``)
 - Sometimes (but not reproducibly so far) necessary to ensure that controller
