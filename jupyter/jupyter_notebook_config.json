@@ -3,6 +3,7 @@
     "nbserver_extensions": {
       "jupyter_nbextensions_configurator": true,
       "ipyparallel.nbextension": true
-    }
+    },
+    "password": "sha1:fc7d0d305bf4:c0db71a68ceca1a175b25de3aed99c7e326451c2"
   }
 }
